@@ -320,3 +320,19 @@ input, select {
 body.modal-open {
     overflow: hidden;
 }
+
+/* Галерея — правильное отображение картинок */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+}
