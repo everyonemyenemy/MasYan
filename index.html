@@ -76,7 +76,7 @@
     <div class="container">
         <h2>Почему выбирают нас</h2>
         <div class="features-grid">
-            <div class="feature-item"><div class="feature-icon">🪪</div><h3>Клиентоориентированность</h3></div>
+            <div class="feature-item"><div class="feature-icon">🪪</div><h3>Приятные бонусы</h3></div>
             <div class="feature-item"><div class="feature-icon">🏠</div><h3>Все для комфортного отдыха</h3></div>
             <div class="feature-item"><div class="feature-icon">🔒</div><h3>Конфиденциальность</h3><p>Полная анонимность</p></div>
             <div class="feature-item"><div class="feature-icon">💳</div><h3>Любой способ оплаты</h3></div>
@@ -205,6 +205,50 @@
             messageDiv.style.color = 'red';
         }
     });
+</script>
+<!-- МОДАЛЬНОЕ ОКНО ДЛЯ ПРОВЕРКИ ВОЗРАСТА -->
+<div id="ageModal" style="display: flex; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999; align-items: center; justify-content: center; font-family: 'Inter', sans-serif;">
+    <div style="background: white; max-width: 450px; width: 90%; padding: 30px 25px; border-radius: 24px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.3); border-top: 6px solid var(--honey, #FF7A00);">
+        <div style="font-size: 48px; margin-bottom: 15px;">🔞</div>
+        <h3 style="font-size: 28px; margin-bottom: 15px; font-family: 'Montserrat', sans-serif;">Вам есть 18 лет?</h3>
+        <p style="font-size: 16px; color: #555; margin-bottom: 30px;">Данный сайт содержит информацию, предназначенную только для совершеннолетних.</p>
+        <div style="display: flex; gap: 15px; justify-content: center;">
+            <button id="ageYes" style="background: var(--honey, #FF7A00); color: white; border: none; padding: 12px 32px; border-radius: 40px; font-size: 18px; font-weight: bold; cursor: pointer; transition: 0.3s;">✅ Да, мне есть 18</button>
+            <button id="ageNo" style="background: #e0e0e0; color: #333; border: none; padding: 12px 32px; border-radius: 40px; font-size: 18px; font-weight: bold; cursor: pointer; transition: 0.3s;">❌ Нет, мне нет 18</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function disableScroll() {
+        document.body.classList.add('modal-open');
+    }
+    
+    function enableScroll() {
+        document.body.classList.remove('modal-open');
+    }
+
+    // Проверяем, проходил ли пользователь проверку раньше
+    if (!localStorage.getItem('ageVerified')) {
+        document.getElementById('ageModal').style.display = 'flex';
+        disableScroll();  // блокируем прокрутку фона
+    } else {
+        document.getElementById('ageModal').style.display = 'none';
+        enableScroll();   // разрешаем прокрутку
+    }
+
+    // Кнопка "ДА"
+    document.getElementById('ageYes').onclick = function() {
+        localStorage.setItem('ageVerified', 'true');
+        document.getElementById('ageModal').style.display = 'none';
+        enableScroll();   // разрешаем прокрутку после закрытия
+    };
+
+    // Кнопка "НЕТ"
+    document.getElementById('ageNo').onclick = function() {
+        window.location.href = 'https://www.google.com/';
+    };
+</script>
 </script>
 </body>
 </html>

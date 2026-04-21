@@ -315,3 +315,8 @@ input, select {
 .footer-link {
     margin-top: 10px;
 }
+
+/* Блокировка прокрутки, когда открыта модалка */
+body.modal-open {
+    overflow: hidden;
+}
