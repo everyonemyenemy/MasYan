@@ -336,3 +336,11 @@ body.modal-open {
     border-radius: 16px;
     display: block;
 }
+
+/*.logo {
+    color: var(--honey);
+}*/
+
+.hero h1 {
+    color: var(--honey);
+}
