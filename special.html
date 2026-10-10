@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Спецпредложения — MёD</title>
+<meta name="description" content="Акции и специальные предложения клуба MёD в Красноярске. Скидки, счастливые часы, подарки.">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="preloader" id="preloader"><div class="preloader-logo">M<span>ё</span>D</div><div class="preloader-bar"><span></span></div></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="grain"></div>
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="age-modal" id="ageModal">
+    <div class="age-box">
+        <div class="age-label">Проверка возраста</div>
+        <h3>Вам есть 18?</h3>
+        <p>Сайт содержит информацию, предназначенную только для совершеннолетних.</p>
+        <div class="age-actions">
+            <button id="ageYes" class="btn btn-primary">Да, мне 18+</button>
+            <button id="ageNo" class="btn btn-ghost">Нет</button>
+        </div>
+    </div>
+</div>
+
+<header class="header" id="header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">MK</span>
+            <span class="logo-name">M<span>ё</span>D</span>
+            <span class="logo-city">Красноярск</span>
+        </a>
+        <nav class="nav">
+            <a href="about.html">О нас</a>
+            <a href="programs.html">Программы</a>
+            <a href="girls.html">Девушки</a>
+            <a href="interior.html">Интерьер</a>
+            <a href="special.html">Акции</a>
+            <a href="index.html#contacts">Контакты</a>
+        </nav>
+        <a href="tel:+79607525411" class="header-phone">
+            <span class="phone-label">Записаться</span>
+            <span class="phone-num">+7 (960) 752-54-11</span>
+        </a>
+        <button class="burger" id="burger" aria-label="Меню"><span></span><span></span></button>
+    </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <nav>
+        <a href="about.html">О нас</a>
+        <a href="programs.html">Программы</a>
+        <a href="girls.html">Девушки</a>
+        <a href="interior.html">Интерьер</a>
+        <a href="special.html">Акции</a>
+        <a href="index.html#contacts">Контакты</a>
+    </nav>
+    <div class="mobile-menu-contacts">
+        <a href="tel:+79607525411">+7 (960) 752-54-11</a>
+        <a href="https://t.me/Asssisasi" target="_blank">@Asssisasi</a>
+    </div>
+</div>
+
+<main>
+
+<section class="page-hero">
+    <div class="container">
+        <div class="section-label reveal" style="text-align:center;display:inline-block;">Акции</div>
+        <h1 class="reveal">Спец<em>предложения</em></h1>
+        <p class="reveal" style="transition-delay:.1s">Особые условия для новых гостей, компаний и постоянных клиентов.</p>
+    </div>
+</section>
+
+<section class="section" style="padding-top:40px;">
+    <div class="container">
+        <div class="specials-grid">
+
+            <div class="special-card reveal">
+                <span class="special-badge">Отзыв</span>
+                <h3>Скидка 10% за отзыв</h3>
+                <p>Оставьте отзыв о нашем клубе — и получите скидку 10% на следующий визит. Спасибо, что делитесь впечатлениями.</p>
+                <div class="special-price">−10%</div>
+                <a href="https://yandex.ru/maps/org/myod/84658668938/reviews/" target="_blank" class="btn btn-primary btn-full" data-cursor>Оставить отзыв</a>
+            </div>
+
+            <div class="special-card reveal" style="transition-delay:.1s">
+                <span class="special-badge">Счастливые часы</span>
+                <h3>Скидка 20% с 8:00 до 18:00</h3>
+                <p>Днём — особенно приятно. С 8 утра и до 18 вечера действует скидка 20% на все программы клуба.</p>
+                <div class="special-price">−20%</div>
+                <a href="index.html#contacts" class="btn btn-primary btn-full" data-cursor>Записаться</a>
+            </div>
+
+            <div class="special-card reveal" style="transition-delay:.2s">
+                <span class="special-badge">День Рождения</span>
+                <h3>Скидка 15% для компании от 3 человек</h3>
+                <p>Отмечаете День Рождения? Приходите компанией от 3-х человек — и получите скидку 15% на всех.</p>
+                <div class="special-price">−15%</div>
+                <a href="index.html#contacts" class="btn btn-primary btn-full" data-cursor>Записаться</a>
+            </div>
+
+        </div>
+
+        <!-- СНОСКА ПРО АКТУАЛЬНЫЕ АКЦИИ -->
+        <div class="special-note reveal">
+            <p>За актуальными акциями и спецпредложениями следите в нашем Telegram</p>
+            <a href="https://t.me/Asssisasi" target="_blank" class="special-note-link" data-cursor>
+                @Asssisasi
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2 class="reveal">Есть <em>вопросы</em>?</h2>
+        <p class="reveal" style="transition-delay:.1s">Напишите — расскажем подробнее про акции и подберём лучший вариант.</p>
+        <a href="https://t.me/Asssisasi" target="_blank" class="btn btn-primary reveal" style="transition-delay:.2s" data-cursor>Написать в Telegram</a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-logo">M<span>ё</span>D</div>
+            <p class="footer-tagline">Мужской массаж в Красноярске</p>
+        </div>
+        <div class="footer-mid">
+            <div class="footer-col">
+                <span class="footer-col-label">Разделы</span>
+                <a href="about.html">О нас</a>
+                <a href="programs.html">Программы</a>
+                <a href="girls.html">Девушки</a>
+                <a href="interior.html">Интерьер</a>
+                <a href="special.html">Спецпредложения</a>
+            </div>
+            <div class="footer-col">
+                <span class="footer-col-label">Контакты</span>
+                <a href="tel:+79607525411">+7 (960) 752-54-11</a>
+                <a href="https://t.me/Asssisasi" target="_blank">Telegram</a>
+                <a href="https://wa.me/79607525411" target="_blank">WhatsApp</a>
+            </div>
+            <div class="footer-col">
+                <span class="footer-col-label">Адрес</span>
+                <p>Красноярск,<br>ул. Водопьянова, 5</p>
+                <p>Круглосуточно</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 MёD. Все права защищены.</span>
+            <a href="#">Политика конфиденциальности</a>
+            <span>18+</span>
+        </div>
+    </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Наверх" data-cursor>
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 15V3M3 9l6-6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

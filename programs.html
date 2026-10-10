@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Программы — MёD</title>
+<meta name="description" content="Программы эротического массажа клуба MёD в Красноярске. Цены и описания.">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="preloader" id="preloader"><div class="preloader-logo">M<span>ё</span>D</div><div class="preloader-bar"><span></span></div></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="grain"></div>
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="age-modal" id="ageModal">
+    <div class="age-box">
+        <div class="age-label">Проверка возраста</div>
+        <h3>Вам есть 18?</h3>
+        <p>Сайт содержит информацию, предназначенную только для совершеннолетних.</p>
+        <div class="age-actions">
+            <button id="ageYes" class="btn btn-primary">Да, мне 18+</button>
+            <button id="ageNo" class="btn btn-ghost">Нет</button>
+        </div>
+    </div>
+</div>
+
+<header class="header" id="header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">MK</span>
+            <span class="logo-name">M<span>ё</span>D</span>
+            <span class="logo-city">Красноярск</span>
+        </a>
+        <nav class="nav">
+            <a href="about.html">О нас</a>
+            <a href="programs.html">Программы</a>
+            <a href="girls.html">Девушки</a>
+            <a href="interior.html">Интерьер</a>
+            <a href="special.html">Акции</a>
+            <a href="index.html#contacts">Контакты</a>
+        </nav>
+        <a href="tel:+79607525411" class="header-phone">
+            <span class="phone-label">Записаться</span>
+            <span class="phone-num">+7 (960) 752-54-11</span>
+        </a>
+        <button class="burger" id="burger" aria-label="Меню"><span></span><span></span></button>
+    </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <nav>
+        <a href="about.html">О нас</a>
+        <a href="programs.html">Программы</a>
+        <a href="girls.html">Девушки</a>
+        <a href="interior.html">Интерьер</a>
+        <a href="special.html">Акции</a>
+        <a href="index.html#contacts">Контакты</a>
+    </nav>
+    <div class="mobile-menu-contacts">
+        <a href="tel:+79607525411">+7 (960) 752-54-11</a>
+        <a href="https://t.me/Asssisasi" target="_blank">@Asssisasi</a>
+    </div>
+</div>
+
+<main>
+
+<section class="page-hero">
+    <div class="container">
+        <div class="section-label reveal" style="text-align:center;display:inline-block;">Услуги</div>
+        <h1 class="reveal">Наши <em>программы</em></h1>
+        <p class="reveal" style="transition-delay:.1s">Авторские программы на любой вкус и запрос. Каждая — особенная.</p>
+    </div>
+</section>
+
+<section class="section" style="padding-top:40px;">
+    <div class="container">
+        <div class="services-grid">
+
+            <article class="service-card reveal">
+                <span class="service-num">01</span>
+                <div class="service-top"><span class="service-duration">60 мин</span></div>
+                <h3>Прекрасное мгновение</h3>
+                <p>Самая популярная программа в студии. Баланс удовольствия и релакса.</p>
+                <div class="service-footer">
+                    <span class="service-price">4 000 <i>₽</i></span>
+                    <a href="index.html#contacts" class="service-arrow" data-cursor>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card reveal" style="transition-delay:.06s">
+                <span class="service-num">02</span>
+                <div class="service-top"><span class="service-duration">60 мин</span></div>
+                <h3>Чистое вдохновение</h3>
+                <p>Программа выведет отдых на новый уровень. Вы ощутите лёгкость и приятное расслабление.</p>
+                <div class="service-footer">
+                    <span class="service-price">6 000 <i>₽</i></span>
+                    <a href="index.html#contacts" class="service-arrow" data-cursor>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card reveal" style="transition-delay:.12s">
+                <span class="service-num">03</span>
+                <div class="service-top"><span class="service-duration">60 мин</span></div>
+                <h3>Полное окрыление</h3>
+                <p>Небесное ощущение на протяжении всего сеанса.</p>
+                <div class="service-footer">
+                    <span class="service-price">10 000 <i>₽</i></span>
+                    <a href="index.html#contacts" class="service-arrow" data-cursor>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card reveal" style="transition-delay:.18s">
+                <span class="service-num">04</span>
+                <div class="service-top"><span class="service-duration">120 мин</span></div>
+                <h3>Медовый ViP</h3>
+                <p>Самые насыщенные программы клуба наполнят ваше время беззаботным блаженством.</p>
+                <div class="service-footer">
+                    <span class="service-price">20 000 <i>₽</i></span>
+                    <a href="index.html#contacts" class="service-arrow" data-cursor>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card reveal" style="transition-delay:.24s">
+                <span class="service-num">05</span>
+                <div class="service-top"><span class="service-duration">сеанс</span></div>
+                <h3>Романтическое свидание</h3>
+                <p>Программа для исполнения скрытых фантазий.</p>
+                <div class="service-footer">
+                    <span class="service-price">7 000 <i>₽</i></span>
+                    <a href="index.html#contacts" class="service-arrow" data-cursor>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card reveal" style="transition-delay:.3s">
+                <span class="service-num">06</span>
+                <div class="service-top"><span class="service-duration">сеанс</span></div>
+                <h3>Лёд и Пламя</h3>
+                <p>Эротическое турне — новый уровень удовольствия для вас.</p>
+                <div class="service-footer">
+                    <span class="service-price">5 000 <i>₽</i></span>
+                    <a href="index.html#contacts" class="service-arrow" data-cursor>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card reveal" style="transition-delay:.36s">
+                <span class="service-num">07</span>
+                <div class="service-top"><span class="service-duration">60 мин</span></div>
+                <h3>Полное расслабление</h3>
+                <p>Предлагаем полное расслабление… Позвольте себе лучшее.</p>
+                <div class="service-footer">
+                    <span class="service-price">5 000 <i>₽</i></span>
+                    <a href="index.html#contacts" class="service-arrow" data-cursor>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card reveal" style="transition-delay:.42s">
+                <span class="service-num">08</span>
+                <div class="service-top"><span class="service-duration">40 мин</span></div>
+                <h3>Базовый минимум</h3>
+                <p>Базовая техника расслабления.</p>
+                <div class="service-footer">
+                    <span class="service-price">4 000 <i>₽</i></span>
+                    <a href="index.html#contacts" class="service-arrow" data-cursor>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card reveal" style="transition-delay:.48s">
+                <span class="service-num">09</span>
+                <div class="service-top"><span class="service-duration">60 мин</span></div>
+                <h3>Для семейных пар</h3>
+                <p>Чувственные программы для вас и вашей половинки, которые перезагрузят вашу страсть.</p>
+                <div class="service-footer">
+                    <span class="service-price">12 000 <i>₽</i></span>
+                    <a href="index.html#contacts" class="service-arrow" data-cursor>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card reveal" style="transition-delay:.54s">
+                <span class="service-num">10</span>
+                <div class="service-top"><span class="service-duration">новинка</span></div>
+                <h3>Новинки</h3>
+                <p>Новые программы, которые привнесут в ваш отдых разнообразие и новые ощущения.</p>
+                <div class="service-footer">
+                    <span class="service-price">4 000 <i>₽</i></span>
+                    <a href="index.html#contacts" class="service-arrow" data-cursor>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card reveal" style="transition-delay:.6s">
+                <span class="service-num">11</span>
+                <div class="service-top"><span class="service-duration">90 мин</span></div>
+                <h3>Исполнение чудес</h3>
+                <p>Программа для исполнения скрытых фантазий.</p>
+                <div class="service-footer">
+                    <span class="service-price">12 000 <i>₽</i></span>
+                    <a href="index.html#contacts" class="service-arrow" data-cursor>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card reveal" style="transition-delay:.66s">
+                <span class="service-num">12</span>
+                <div class="service-top"><span class="service-duration">90 мин</span></div>
+                <h3>Медовое Искушение</h3>
+                <p>Отдых для самых изощрённых гостей. Только мёд, только искушение.</p>
+                <div class="service-footer">
+                    <span class="service-price">15 000 <i>₽</i></span>
+                    <a href="index.html#contacts" class="service-arrow" data-cursor>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <article class="service-card reveal" style="transition-delay:.72s">
+                <span class="service-num">13</span>
+                <div class="service-top"><span class="service-duration">60 мин</span></div>
+                <h3>Первое знакомство</h3>
+                <p>Тонкое приглашение в мир ощущений. Скидка 20% на первое посещение.</p>
+                <div class="service-footer">
+                    <span class="service-price">5 000 <i>₽</i></span>
+                    <a href="index.html#contacts" class="service-arrow" data-cursor>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <div style="text-align:center; margin-top:56px;">
+            <a href="https://yandex.ru/maps/org/myod/84658668938/prices/" target="_blank" class="btn btn-ghost" data-cursor>
+                Актуальные цены на Яндекс.Картах
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 8h13M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2 class="reveal">Готовы <em>записаться</em>?</h2>
+        <p class="reveal" style="transition-delay:.1s">Оставьте заявку или напишите в Telegram — подберём удобное время.</p>
+        <a href="index.html#contacts" class="btn btn-primary reveal" style="transition-delay:.2s" data-cursor>Оставить заявку</a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-logo">M<span>ё</span>D</div>
+            <p class="footer-tagline">Мужской массаж в Красноярске</p>
+        </div>
+        <div class="footer-mid">
+            <div class="footer-col">
+                <span class="footer-col-label">Разделы</span>
+                <a href="about.html">О нас</a>
+                <a href="programs.html">Программы</a>
+                <a href="girls.html">Девушки</a>
+                <a href="interior.html">Интерьер</a>
+                <a href="special.html">Спецпредложения</a>
+            </div>
+            <div class="footer-col">
+                <span class="footer-col-label">Контакты</span>
+                <a href="tel:+79607525411">+7 (960) 752-54-11</a>
+                <a href="https://t.me/Asssisasi" target="_blank">Telegram</a>
+                <a href="https://wa.me/79607525411" target="_blank">WhatsApp</a>
+            </div>
+            <div class="footer-col">
+                <span class="footer-col-label">Адрес</span>
+                <p>Красноярск,<br>ул. Водопьянова, 5</p>
+                <p>Круглосуточно</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 MёD. Все права защищены.</span>
+            <a href="#">Политика конфиденциальности</a>
+            <span>18+</span>
+        </div>
+    </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Наверх" data-cursor>
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 15V3M3 9l6-6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

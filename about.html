@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>О нас — MёD</title>
+<meta name="description" content="Клуб MёD — островок страсти и наслаждения в Красноярске.">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="preloader" id="preloader"><div class="preloader-logo">M<span>ё</span>D</div><div class="preloader-bar"><span></span></div></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="grain"></div>
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="age-modal" id="ageModal">
+    <div class="age-box">
+        <div class="age-label">Проверка возраста</div>
+        <h3>Вам есть 18?</h3>
+        <p>Сайт содержит информацию, предназначенную только для совершеннолетних.</p>
+        <div class="age-actions">
+            <button id="ageYes" class="btn btn-primary">Да, мне 18+</button>
+            <button id="ageNo" class="btn btn-ghost">Нет</button>
+        </div>
+    </div>
+</div>
+
+<header class="header" id="header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">MK</span>
+            <span class="logo-name">M<span>ё</span>D</span>
+            <span class="logo-city">Красноярск</span>
+        </a>
+        <nav class="nav">
+            <a href="about.html">О нас</a>
+            <a href="programs.html">Программы</a>
+            <a href="girls.html">Девушки</a>
+            <a href="interior.html">Интерьер</a>
+            <a href="special.html">Акции</a>
+            <a href="index.html#contacts">Контакты</a>
+        </nav>
+        <a href="tel:+79607525411" class="header-phone">
+            <span class="phone-label">Записаться</span>
+            <span class="phone-num">+7 (960) 752-54-11</span>
+        </a>
+        <button class="burger" id="burger" aria-label="Меню"><span></span><span></span></button>
+    </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <nav>
+        <a href="about.html">О нас</a>
+        <a href="programs.html">Программы</a>
+        <a href="girls.html">Девушки</a>
+        <a href="interior.html">Интерьер</a>
+        <a href="special.html">Акции</a>
+        <a href="index.html#contacts">Контакты</a>
+    </nav>
+    <div class="mobile-menu-contacts">
+        <a href="tel:+79607525411">+7 (960) 752-54-11</a>
+        <a href="https://t.me/Asssisasi" target="_blank">@Asssisasi</a>
+    </div>
+</div>
+
+<main>
+
+<section class="page-hero">
+    <div class="container">
+        <div class="section-label reveal" style="text-align:center;display:inline-block;">О клубе</div>
+        <h1 class="reveal">О <em>нас</em></h1>
+        <p class="reveal" style="transition-delay:.1s">MёD — это не просто массаж. Это искусство наслаждения.</p>
+    </div>
+</section>
+
+<section class="section" style="padding-top:40px;">
+    <div class="container">
+        <div class="about-page-content reveal">
+            <p>Добро пожаловать в клуб MёD — островок страсти и наслаждения, где самые сокровенные фантазии обретают реальность. Здесь время останавливается, а чувственность не знает границ.</p>
+            <p>Мы работаем круглосуточно и приглашаем вас в мир блаженства, где каждый вечер становится особенным. Наши мастера — искусные проводники по пути страсти. Они окружат вас заботой и вниманием, помогут полностью расслабиться и открыться новым ощущениям. Каждое прикосновение, каждое движение — это танец ваших чувств и желаний.</p>
+            <p>Приходите к нам как к себе домой — без лишних вопросов, без осуждения, без границ. Только вы, атмосфера и ваши желания.</p>
+            <p>MёD — искусство наслаждения.</p>
+        </div>
+
+        <!-- ФОТО ИНТЕРЬЕРА — уникальные для этой страницы -->
+        <div class="about-photos">
+            <div class="about-photo-item reveal-scale">
+                <img src="about1.jpg" alt="Атмосфера клуба MёD">
+            </div>
+            <div class="about-photo-item reveal-scale" style="transition-delay:.1s">
+                <img src="about2.jpg" alt="Мастерица клуба MёD">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2 class="reveal">Хотите <em>узнать</em> больше?</h2>
+        <p class="reveal" style="transition-delay:.1s">Посмотрите наших девушек или сразу оставьте заявку — мы свяжемся с вами.</p>
+        <div class="hero-actions reveal" style="transition-delay:.2s;justify-content:center;display:flex;gap:16px;flex-wrap:wrap;">
+            <a href="girls.html" class="btn btn-primary" data-cursor>Наши девушки</a>
+            <a href="index.html#contacts" class="btn btn-ghost" data-cursor>Записаться</a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-logo">M<span>ё</span>D</div>
+            <p class="footer-tagline">Мужской массаж в Красноярске</p>
+        </div>
+        <div class="footer-mid">
+            <div class="footer-col">
+                <span class="footer-col-label">Разделы</span>
+                <a href="about.html">О нас</a>
+                <a href="programs.html">Программы</a>
+                <a href="girls.html">Девушки</a>
+                <a href="interior.html">Интерьер</a>
+                <a href="special.html">Спецпредложения</a>
+            </div>
+            <div class="footer-col">
+                <span class="footer-col-label">Контакты</span>
+                <a href="tel:+79607525411">+7 (960) 752-54-11</a>
+                <a href="https://t.me/Asssisasi" target="_blank">Telegram</a>
+                <a href="https://wa.me/79607525411" target="_blank">WhatsApp</a>
+            </div>
+            <div class="footer-col">
+                <span class="footer-col-label">Адрес</span>
+                <p>Красноярск,<br>ул. Водопьянова, 5</p>
+                <p>Круглосуточно</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 MёD. Все права защищены.</span>
+            <a href="#">Политика конфиденциальности</a>
+            <span>18+</span>
+        </div>
+    </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Наверх" data-cursor>
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 15V3M3 9l6-6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
