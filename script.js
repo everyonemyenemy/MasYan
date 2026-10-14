@@ -161,3 +161,109 @@ if (form) {
         }
     });
 }
+
+/* ==========================================================
+   GIRL MODAL — листание фото девушек
+   ========================================================== */
+const girlsData = [
+    {
+        name: 'Юля',
+        params: ['23 года', '50кг', 'грудь 3'],
+        photos: ['girl1.jpg', 'girl1-2.jpg', 'girl1-3.jpg']
+    },
+    {
+        name: 'Соня',
+        params: ['25 лет', '52 кг', 'грудь 2'],
+        photos: ['girl2.jpg', 'girl2-2.jpg']
+    },
+    {
+        name: 'Рита',
+        params: ['18 лет', '55 кг', 'грудь 2'],
+        photos: ['girl3.jpg', 'girl3-2.jpg', 'girl3-3.jpg']
+    },
+    {
+        name: 'Ангелина',
+        params: ['22 года', '58кг', 'грудь 3'],
+        photos: ['girl4.jpg', 'girl4-2.jpg', 'girl4-3.jpg']
+    },
+    {
+        name: 'Василина',
+        params: ['24 года', '50 кг', 'грудь 2'],
+        photos: ['girl5.jpg', 'girl5-2.jpg']
+    },
+];
+
+const girlModal = document.getElementById('girlModal');
+const girlModalImg = document.getElementById('girlModalImg');
+const girlModalName = document.getElementById('girlModalName');
+const girlModalParams = document.getElementById('girlModalParams');
+const girlModalCounter = document.getElementById('girlModalCounter');
+const girlModalPrev = document.getElementById('girlModalPrev');
+const girlModalNext = document.getElementById('girlModalNext');
+const girlModalClose = document.getElementById('girlModalClose');
+
+let currentGirl = 0;
+let currentPhoto = 0;
+
+function openGirlModal(index) {
+    currentGirl = index;
+    currentPhoto = 0;
+    renderGirlPhoto();
+    girlModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeGirlModal() {
+    girlModal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function renderGirlPhoto() {
+    const girl = girlsData[currentGirl];
+    const total = girl.photos.length;
+
+    girlModalImg.src = girl.photos[currentPhoto];
+    girlModalName.textContent = girl.name;
+    girlModalParams.innerHTML = girl.params.map(p => `<span>${p}</span>`).join('');
+    girlModalCounter.textContent = `${currentPhoto + 1} / ${total}`;
+
+    girlModalPrev.disabled = total <= 1;
+    girlModalNext.disabled = total <= 1;
+}
+
+document.querySelectorAll('[data-girl]').forEach(card => {
+    card.addEventListener('click', () => {
+        openGirlModal(parseInt(card.dataset.girl));
+    });
+    card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openGirlModal(parseInt(card.dataset.girl));
+        }
+    });
+});
+
+girlModalPrev.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const total = girlsData[currentGirl].photos.length;
+    currentPhoto = (currentPhoto - 1 + total) % total;
+    renderGirlPhoto();
+});
+
+girlModalNext.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const total = girlsData[currentGirl].photos.length;
+    currentPhoto = (currentPhoto + 1) % total;
+    renderGirlPhoto();
+});
+
+girlModalClose.addEventListener('click', closeGirlModal);
+
+girlModal.addEventListener('click', (e) => {
+    if (e.target === girlModal) closeGirlModal();
+});
+
+document.addEventListener('keydown', (e) => {
+    if (!girlModal.classList.contains('active')) return;
+    if (e.key === 'Escape') closeGirlModal();
+});

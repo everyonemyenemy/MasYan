@@ -80,22 +80,22 @@
     <div class="container">
         <div class="girls-grid">
 
-            <div class="girl-card reveal">
+            <div class="girl-card reveal" data-girl="0" role="button" tabindex="0">
                 <span class="girl-card-num">01</span>
                 <div class="girl-photo">
-                    <img src="girl1.jpg" alt="Рита">
+                    <img src="girl1.jpg" alt="Юля">
                     <div class="girl-info">
-                        <div class="girl-name">Рита</div>
+                        <div class="girl-name">Юля</div>
                         <div class="girl-params">
-                            <span>18 лет</span>
-                            <span>55 кг</span>
-                            <span>грудь 2</span>
+                            <span>23 года</span>
+                            <span>50кг</span>
+                            <span>грудь 3</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="girl-card reveal" style="transition-delay:.06s">
+            <div class="girl-card reveal" data-girl="1" role="button" tabindex="0" style="transition-delay:.06s">
                 <span class="girl-card-num">02</span>
                 <div class="girl-photo">
                     <img src="girl2.jpg" alt="Соня">
@@ -110,10 +110,25 @@
                 </div>
             </div>
 
-            <div class="girl-card reveal" style="transition-delay:.12s">
+            <div class="girl-card reveal" data-girl="2" role="button" tabindex="0" style="transition-delay:.12s">
                 <span class="girl-card-num">03</span>
                 <div class="girl-photo">
-                    <img src="girl3.jpg" alt="Ангелина">
+                    <img src="girl3.jpg" alt="Рита">
+                    <div class="girl-info">
+                        <div class="girl-name">Рита</div>
+                        <div class="girl-params">
+                            <span>18 лет</span>
+                            <span>55 кг</span>
+                            <span>грудь 2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="girl-card reveal" data-girl="3" role="button" tabindex="0" style="transition-delay:.18s">
+                <span class="girl-card-num">04</span>
+                <div class="girl-photo">
+                    <img src="girl4.jpg" alt="Ангелина">
                     <div class="girl-info">
                         <div class="girl-name">Ангелина</div>
                         <div class="girl-params">
@@ -125,10 +140,10 @@
                 </div>
             </div>
 
-            <div class="girl-card reveal" style="transition-delay:.18s">
-                <span class="girl-card-num">04</span>
+            <div class="girl-card reveal" data-girl="4" role="button" tabindex="0" style="transition-delay:.24s">
+                <span class="girl-card-num">05</span>
                 <div class="girl-photo">
-                    <img src="girl4.jpg" alt="Василина">
+                    <img src="girl5.jpg" alt="Василина">
                     <div class="girl-info">
                         <div class="girl-name">Василина</div>
                         <div class="girl-params">
@@ -139,7 +154,7 @@
                     </div>
                 </div>
             </div>
-
+           
         </div>
     </div>
 </section>
@@ -192,6 +207,32 @@
 <button class="to-top" id="toTop" aria-label="Наверх" data-cursor>
     <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 15V3M3 9l6-6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </button>
+
+<!-- МОДАЛЬНОЕ ОКНО ДЛЯ ФОТО ДЕВУШКИ -->
+<div class="girl-modal" id="girlModal">
+    <button class="girl-modal-close" id="girlModalClose" aria-label="Закрыть">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+
+    <button class="girl-modal-arrow girl-modal-prev" id="girlModalPrev" aria-label="Назад">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
+    <button class="girl-modal-arrow girl-modal-next" id="girlModalNext" aria-label="Вперёд">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
+    <div class="girl-modal-content">
+        <div class="girl-modal-photo">
+            <img id="girlModalImg" src="" alt="">
+        </div>
+        <div class="girl-modal-info">
+            <div class="girl-modal-name" id="girlModalName"></div>
+            <div class="girl-modal-params" id="girlModalParams"></div>
+            <div class="girl-modal-counter" id="girlModalCounter"></div>
+        </div>
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>
